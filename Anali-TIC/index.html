@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunication - Portal Residencial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="login-view" class="login-container">
+        <div class="login-card">
+            <div class="logo-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 21V11M10 21V11M14 21V11M18 21V11M12 3L2 7h20L12 3z"/></svg>
+            </div>
+            <h1 class="brand-title">Comunication</h1>
+            <p class="brand-subtitle">Portal Residencial</p>
+
+            <form id="login-form">
+                <input type="hidden" id="csrf_token" value="">
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" required placeholder="carlos.mendoza@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn-primary">Iniciar sesión</button>
+            </form>
+
+            <div class="login-footer">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="dashboard-view" class="app-layout hidden">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box small">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M12 3L2 7h20L12 3z"/></svg>
+                </div>
+                <span>Comunication</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="inicio">
+                    <span>Inicio</span>
+                </a>
+                <a href="#" class="nav-item" data-section="noticias">
+                    <span>Noticias</span>
+                </a>
+                <a href="#" class="nav-item" data-section="eventos">
+                    <span>Eventos</span>
+                </a>
+                <a href="#" class="nav-item" data-section="pagos">
+                    <span>Pagos</span>
+                </a>
+                <a href="#" class="nav-item" data-section="notificaciones">
+                    <span>Notificaciones</span>
+                </a>
+                <a href="#" class="nav-item" data-section="residentes">
+                    <span>Residentes</span>
+                </a>
+                <a href="#" class="nav-item" data-section="perfil">
+                    <span>Perfil</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" id="logout-btn" class="logout-link">→ Cerrar sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-title">
+                    <h2>Bienvenido, <span id="user-display-name">Carlos</span></h2>
+                    <p class="subtitle">Resumen de tu condominio</p>
+                </div>
+                <div class="user-badge">
+                    <div class="avatar">CM</div>
+                    <div>
+                        <strong id="user-badge-name">Carlos Mendoza</strong>
+                        <span id="user-badge-apt">Residente Apto 402</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <div class="card stat-card">
+                    <h3>Pagos pendientes</h3>
+                    <div class="amount">$2,450</div>
+                    <a href="#" class="card-link">Ver más</a>
+                </div>
+
+                <div class="card stat-card">
+                    <h3>Notificaciones</h3>
+                    <div class="stat-number">8 <span class="unit">sin leer</span></div>
+                    <a href="#" class="card-link">Ver más</a>
+                </div>
+
+                <div class="card stat-card">
+                    <h3>Próximos eventos</h3>
+                    <div class="stat-number">3 <span class="unit">eventos</span></div>
+                    <a href="#" class="card-link">Ver más</a>
+                </div>
+
+                <div class="card stat-card">
+                    <h3>Noticias recientes</h3>
+                    <div class="stat-number">5 <span class="unit">nuevas</span></div>
+                    <a href="#" class="card-link">Ver más</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
